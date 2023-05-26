@@ -1,0 +1,25 @@
+Assets	资产
+Samples	例子
+Script	脚本
+UI	界面
+Create new wallet	创建钱包
+Import a wallet	导入钱包
+Rquest Airdrop	请求空投
+Read API	读取 API
+Wallet	钱包
+Counter	计数器
+Mint NFT	铸造 NFT
+Active address:	当前地址:
+Mint your own awesome random color Deadbytes Nft using OriginByte Nft Protocol, instantly to the target wallet!	通过OriginByte NFT协议铸造你的优异的随机颜色DeadBytes NFT，即时存入到你的钱包内!
+Important: to be able to execute a transaction you need to have SUI coin in your active wallet. We will automatically query for coin objects with balance over 1000.	请注意:为了能运行智能合约,您必须在当前钱包内存有sui币.我们将自动检测超过1000虚拟币的对象.
+MintCap Id	MintCap Id
+"The 'increment counter' button executes a move call transaction that modifies a Shared Sui object (a counter from the sui samples). The counter can be incremented by anyone calling the increment method. Check the ""value"" field in the output field. See source code for more details. 
+
+Important: to be able to execute a transaction you need to have gas in your active wallet."	"递增计数器：这个按钮执行一个move调用修改一个共享的Sui 对象 （计数一次从Sui的例子） 计数器可以通过递增方法来增加.
+在输出区 检查“Value”区， 更多细节请查看源代码
+
+请注意，你需要在你钱包内有gas 才能执行这些操作"
+Increment Counter	递增计数器
+Refresh Counter	刷新计数器
+Get Objects Owned By Address	获取按地址拥有的对象
+Let's set up your wallet!	让我们设置你的钱包！
