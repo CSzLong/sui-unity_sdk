@@ -5,13 +5,19 @@
 
 To integrate the Sui Unity SDK into your Unity project, please follow below steps:
 
-1. Download the latest version of the Sui Unity SDK from the official Sui website.
+1. Download the latest version of the `Sui Unity SDK` from the official Sui website.
 
-2. Import Sui Unity SDK into your Unity project, the navigation:<br/>
+   ```shell
+   git clone https://github.com/CSzLong/sui-unity_sdk.git --branch master
+   ```
+
+2. Import Sui Unity SDK into your Unity project, follow the navigation:<br/>
    **Assets -> Import Package -> Custom Package** <br/>
-   then select the package that you have downloaded.
+   then select the `Sui Unity SDK` package.
 
-3. Set up the Unity scene to work with the Sui SDK. You can do this by adding the **`SuiCanvas`** prefab to your scene. This prefab contains a canvas and a script that initializes the Sui SDK.
+3. Set up the Unity scene to work with the Sui SDK. 
+   You can do this by adding the **`SuiCanvas`** prefab to your scene. 
+   This prefab contains a canvas and a script that initializes the Sui SDK.
 
 4. Finally, you will need to initialize the Sui SDK and set up any necessary configurations in your script. This can be done using the **`SuiManager`** class provided in the SDK.
 
