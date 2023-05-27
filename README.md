@@ -1,6 +1,6 @@
 # SUI Unity SDK
 
-[![License](https://img.shields.io/docker/v/CSzlong/sui-unity_sdk/v0.1.0?style=plastic)](https://img.shields.io/docker/v/CSzlong/sui-unity_sdk/v0.1.0?style=plastic)
+[![License](https://img.shields.io/github/v/release/CSzlong/sui-unity_sdk?style=for-the-badge)](https://github.com/CSzLong/sui-unity_sdk/releases/tag/v0.1.0)
 
 ## How to integrate Sui Unity SDK into Unity?
 
