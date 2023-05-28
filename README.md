@@ -15,6 +15,7 @@ To integrate the Sui Unity SDK into your Unity project, please follow below step
 
 2. Import Sui Unity SDK into your Unity project, follow the navigation:<br/>
    **Assets -> Import Package -> Custom Package** <br/>
+   ![import](images/ImportCustomPKG.png)
    then select the `Sui Unity SDK` package.
 
 3. Set up the Unity scene to work with the Sui SDK. 
@@ -28,7 +29,7 @@ For a more detailed explanation, including sample code, please refer to the docu
 
 ## What are the features provided in the SDK?
 
-  To use the Sui Unity SDK, you need to be familiar with the various features provided in the SDK. Some features include:
+### Key Features
 
 1. Backend and frontend separation functionality
 
