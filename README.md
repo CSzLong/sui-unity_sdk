@@ -4,30 +4,23 @@
 
 ## How to integrate Sui Unity SDK into Unity?
 
+1. Download the latest version of the `Sui Unity SDK 2023` file `sui-unity-sdk.unitypackage` from releases of this repository:.
 
-To integrate the Sui Unity SDK into your Unity project, please follow below steps:
+   https://github.com/CSzLong/sui-unity_sdk/releases
 
-1. Download the latest version of the `Sui Unity SDK` from the official Sui website.
-
-   ```shell
-   git clone https://github.com/CSzLong/sui-unity_sdk.git --branch master
-   ```
-
-2. Import Sui Unity SDK into your Unity project, follow the navigation:<br/>
-   **Assets -> Import Package -> Custom Package** <br/>
+2. Import Sui Unity SDK into your Unity project:<br/>
+   Navigation: **Assets -> Import Package -> Custom Package** <br/>
    ![import](images/ImportCustomPKG.png)
-   then select the `Sui Unity SDK 2023` package.
+   select the downloaded `Sui Unity SDK 2023` package.
 
-3. Set up the Unity scene to work with the Sui SDK. 
+3. Set up the Unity scene to work with the Sui SDK.<br/>
    You can do this by adding the **`SuiCanvas`** prefab to your scene. 
    This prefab contains a canvas and a script that initializes the Sui SDK.
 
-4. Finally, you will need to initialize the Sui SDK and set up any necessary configurations in your script. This can be done using the **`SuiManager`** class provided in the SDK.
+4. Involve class **`SuiManager`** from `Sui Unity SDK 2023` to initialize Sui SDK and set up any necessary configurations in your script.
 
 For a more detailed explanation, including sample code, please refer to the documentation provided by Sui in the SDK package or on their website.
 
-
-## What are the features provided in the SDK?
 
 ### Key Features
 
@@ -47,12 +40,12 @@ For a more detailed explanation, including sample code, please refer to the docu
 
 1. Make sure you have imported the SDK correctly and follow the usage instructions provided in the Sui documentation.
 
-2. Before using the SDK, please read the documentation to ensure that you are familiar with all the features and requirements of using the SDK.
+2. Before using the SDK, please read the documentation to ensure that you are familiar with all the features and requirements of the SDK.
 
-3. Be careful not to leak sensitive data and consider checking and deleting all code or information that may contain sensitive data before publishing.
+3. Be careful that do not to leak sensitive data and consider checking and deleting all code or information that may contain sensitive data before publishing.
 
 
-## Some examples
+## Examples
 
 The code examples for using RPCs in Unity depend on which RPC library you choose to use. Here are two examples that may be helpful:
 
@@ -103,3 +96,6 @@ In this example, we define an RPC function called **`RpcSomeFunction`** and call
 
 Please note that these examples are conceptual proof-of-concepts and should not be copy-pasted directly into your code. You should modify these examples to suit your specific needs in order to use RPCs correctly in your project.
 
+## Demo UI
+
+![DemoUI](images/demoUI.png)
