@@ -1,1 +1,13 @@
-v 0.1
+v 0.3.1
+open package
+select the `Sui Unity SDK 2023` package.
+
+DemoUI
+
+Please refer to the Wallet example in the DemoUI for a demonstration of the wallet.
+
+
+
+
+
+
