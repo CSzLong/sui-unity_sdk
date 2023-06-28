@@ -1,0 +1,16 @@
+sui-unity-sdk v0.3.0
+
+Plans to access Wallet list:
+    Suiet
+    Mofa
+    Morphis
+    FoxWallet
+    MartianWallet
+    Splash Wallet
+    SensuiWallet
+    ethos
+    WELLDONE Wallet
+    Keystone
+
+Some more wallet in perfect, some only browser version, undeveloped app version, need research to try to access.
+
