@@ -34,7 +34,6 @@ For a more detailed explanation, including sample code, please refer to the docu
 
 5. Custom UI component library
 
-- What should be noted?
 
 ## When using the Sui Unity SDK, please note the following:
 
@@ -99,3 +98,26 @@ Please note that these examples are conceptual proof-of-concepts and should not 
 ## Demo UI
 
 ![DemoUI](images/demoUI.png)
+
+## sui-unity-sdk v0.3.0
+
+### New Wallet connection
+
+Plans to access Wallet list:
+- Suiet
+- Mofa
+- Morphis
+- FoxWallet
+- MartianWallet
+- Splash Wallet
+- SensuiWallet
+- ethos
+- WELLDONE Wallet
+- Keystone
+
+Some more wallet in perfect, some only browser version, undeveloped app version, need research to try to access.
+
+### Smart Contractor update
+
+- NFT Kiosk
+- NFT - Coin swap
