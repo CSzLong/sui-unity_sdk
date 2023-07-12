@@ -1,3 +1,8 @@
+sui-unity-sdk v0.4.0
+
+add MicroMoveLab's logo
+update the UI
+
 sui-unity-sdk v0.3.0
 
 Plans to access Wallet list:
