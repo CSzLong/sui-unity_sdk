@@ -2,6 +2,7 @@ sui-unity-sdk v0.4.0
 
 add MicroMoveLab's logo
 update the UI
+unity version 2021.3.8f1c1
 
 sui-unity-sdk v0.3.0
 
