@@ -101,6 +101,8 @@ Please note that these examples are conceptual proof-of-concepts and should not 
 
 ## sui-unity-sdk v0.3.0
 
+![V0.3.0](images/wList.jpg)
+
 ### New Wallet connection
 
 Plans to access Wallet list:
@@ -121,3 +123,18 @@ Some more wallet in perfect, some only browser version, undeveloped app version,
 
 - NFT Kiosk
 - NFT - Coin swap
+
+## sui-unity_sdk v0.4.0
+
+1. Support the unity version 2021.3.8f1c1
+   
+2. MicroMoveLab logo
+
+   ![logo](./images/new01.jpg)
+
+3. UI for NFT swap
+   ![Create Pool](./images/new02.jpg)
+   ![Step 1](./images/new03.jpg)
+   ![Step 2](./images/new04.jpg)
+   ![Step 3](./images/new05.jpg)
+
