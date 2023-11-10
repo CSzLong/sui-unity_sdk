@@ -144,3 +144,8 @@ Some more wallet in perfect, some only browser version, undeveloped app version,
    ![Step 2](./images/new04.jpg)
    ![Step 3](./images/new05.jpg)
 
+## Update on 10-Nov-2023
+
+Update smart contract to match SUI v14.
+
+Coming changes: Enhance the AMM Contract.
