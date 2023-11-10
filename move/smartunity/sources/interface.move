@@ -17,9 +17,10 @@ module smartunity::interface {
         record_id: ID
     }
 
+    /*
     struct Score has copy, drop {
         score: u64
-    }
+    }*/
 
     struct Property has copy, drop {
         lp_id: ID
@@ -31,7 +32,7 @@ module smartunity::interface {
 
     public entry fun init_coin(flag: &mut Flag,
                                ctx: &mut TxContext) {
-        assert!(!flag::exists_coin<GCOIN>(flag, object::id_from_address(sender(ctx))), ErrCoin_Exist);
+        assert!(!flag::exists_coin(flag, object::id_from_address(sender(ctx))), ErrCoin_Exist);
         let zero_coin = coin::zero<GCOIN>(ctx);
         let coin_id = object::id(&zero_coin);
         transfer::public_transfer(zero_coin, sender(ctx));

@@ -32,13 +32,13 @@ module smartunity::nft_owner {
     }
 
     /// Remove the NFT deposit information from NFT Holder Collection
-    public fun remove_nftholder(self: NftHolderOwner, id: ID, ctx: &mut TxContext) {
+    public fun remove_nftholder(self: NftHolderOwner, id: ID, ctx: &TxContext) {
         let _nftholder = table::remove(&mut self.nftholder, id);
         transfer(self, sender(ctx));
     }
 
     /// Add new NFT deposit information from NFT Holder Collection
-    public fun add_nftholder(self: NftHolderOwner, id: ID, kiosk_id: ID, ctx: &mut TxContext){
+    public fun add_nftholder(self: NftHolderOwner, id: ID, kiosk_id: ID, ctx: &TxContext){
         let nftholder = NftHolder {
             kiosk_id,
             owner: sender(ctx),

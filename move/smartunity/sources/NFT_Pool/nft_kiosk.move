@@ -138,7 +138,7 @@ module smartunity::nft_kiosk {
                                                                              ctx: &mut TxContext
     ) {
         assert!(get<T>() == trade_pool.coin, EInvalidTrasnactionCoinType);
-        assert!(coin::value(&coin_stable) >= trade_pool.init_price, ENotEnoughCoinX);
+        assert!(coin::value(&coin_stable) >= trade_pool.init_price, ENotEnoughCoinY);
         assert!(object::id(kiosk) == trade_pool.collection, ECollectionNotInTradingPool);
         pay(payment, trade_pool.fee, trade_pool.account, ctx);
         trading::withdraw_nft<NFT>(kiosk, nft_id, ctx);
@@ -154,7 +154,7 @@ module smartunity::nft_kiosk {
                                                                            ctx: &mut TxContext
     ) {
         assert!(get<T>() == trade_pool.coin, EInvalidTrasnactionCoinType);
-        assert!(coin::value(&coin_self) >= trade_pool.init_price, ENotEnoughCoinX);
+        assert!(coin::value(&coin_self) >= trade_pool.init_price, ENotEnoughCoinZ);
         assert!(object::id(kiosk) == trade_pool.collection, ECollectionNotInTradingPool);
         pay(payment, trade_pool.fee, trade_pool.account, ctx);
         trading::withdraw_nft<NFT>(kiosk, nft_id, ctx);
@@ -162,10 +162,10 @@ module smartunity::nft_kiosk {
     }
 
     /// Withdraw the NFT by the person who deposited it.
-    public entry fun withdraw_nft<X, Y, Z, T, NFT: key + store>(trade_pool: &mut TradePool<X, Y, Z>,
+    public entry fun withdraw_nft<X, Y, Z, NFT: key + store>(trade_pool: &TradePool<X, Y, Z>,
                                                                 kiosk: &mut Kiosk,
                                                                 nft_id: ID,
-                                                                ctx: &mut TxContext) {
+                                                                ctx: &TxContext) {
         assert!(object::id(kiosk) == trade_pool.collection, ECollectionNotInTradingPool);
         trading::withdraw_nft<NFT>(kiosk, nft_id, ctx);
     }

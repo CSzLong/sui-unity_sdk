@@ -6,7 +6,7 @@ module smartunity::record {
 
     friend smartunity::interface;
 
-    const ErrOverflow: u64 = 2001;
+    //const ErrOverflow: u64 = 2001;
     const ErrNotEnough: u64 = 2002;
 
     struct Record has key, store {

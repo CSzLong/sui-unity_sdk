@@ -72,7 +72,7 @@ module smartunity::trading {
     public fun withdraw_nft<NFT: key + store>(
         self: &mut Kiosk,
         nft_id: ID,
-        ctx: &mut TxContext
+        ctx: &TxContext
     ){
         let refs = df::borrow_mut(uid_mut(self), NftRefsDfKey{});
         let _ref: NftRef = table::remove(refs, nft_id);

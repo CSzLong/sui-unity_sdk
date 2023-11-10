@@ -97,11 +97,11 @@ module smartunity::liquidity {
                                               ctx: &mut TxContext): (Coin<X>, Coin<Y>) {
         assert!(vector::length(&vec) == 2, ErrInvalidVecotrType);
         let lp_balance_value = coin::value(&lp);
-        let coin_x_out = *vector::borrow(&mut vec, 0);
-        let coin_y_out = *vector::borrow(&mut vec, 1);
+        let coin_x_out = *vector::borrow(&vec, 0);
+        let coin_y_out = *vector::borrow(&vec, 1);
         assert!(lp_balance_value == coin_x_out + coin_y_out, ErrBalanceNotMatch);
-        assert!(balance::value(&mut pool.coin_x) > coin_x_out, ErrNotEnoughXInPool);
-        assert!(balance::value(&mut pool.coin_y) > coin_y_out, ErrNotEnoughYInPool);
+        assert!(balance::value(&pool.coin_x) > coin_x_out, ErrNotEnoughXInPool);
+        assert!(balance::value(&pool.coin_y) > coin_y_out, ErrNotEnoughYInPool);
         balance::decrease_supply(&mut pool.lp_supply, coin::into_balance(lp));
         (
             coin::take(&mut pool.coin_x, coin_x_out, ctx),
@@ -115,7 +115,7 @@ module smartunity::liquidity {
                                                       pocket: &mut Pocket,
                                                       ctx: &mut TxContext) {
         let lp_id = object::id(&lp);
-        let vec = *table::borrow(&mut pocket.table, lp_id);
+        let vec = *table::borrow(&pocket.table, lp_id);
         let (coin_x_out, coin_y_out) = remove_liquidity(pool, lp, vec, ctx);
         assert!(coin::value(&coin_x_out) > 0 && coin::value(&coin_y_out) > 0, ErrRemoveFailed);
         let vec_out = table::remove(&mut pocket.table, lp_id);
@@ -133,8 +133,8 @@ module smartunity::liquidity {
                                       coin_x_out: u64,
                                       coin_y_out: u64,
                                       ctx: &mut TxContext): (Coin<X>, Coin<Y>) {
-        assert!(balance::value(&mut pool.coin_x) > coin_x_out, ErrNotEnoughXInPool);
-        assert!(balance::value(&mut pool.coin_y) > coin_y_out, ErrNotEnoughYInPool);
+        assert!(balance::value(&pool.coin_x) > coin_x_out, ErrNotEnoughXInPool);
+        assert!(balance::value(&pool.coin_y) > coin_y_out, ErrNotEnoughYInPool);
         assert!(coin::value(lp) >= coin_x_out + coin_y_out, ErrNotEnoughBalanceLP);
         let coin_x_balance = vector::borrow_mut(vec, 0);
         *coin_x_balance = *coin_x_balance - coin_x_out;
@@ -154,7 +154,7 @@ module smartunity::liquidity {
                                             ctx: &mut TxContext): Coin<Y> {
         let paid_value = coin::value(&paid_in);
         coin::put(&mut pool.coin_x, paid_in);
-        assert!(paid_value < balance::value(&mut pool.coin_y), ErrNotEnoughYInPool);
+        assert!(paid_value < balance::value(&pool.coin_y), ErrNotEnoughYInPool);
         coin::take(&mut pool.coin_y, paid_value, ctx)
     }
 
@@ -164,7 +164,7 @@ module smartunity::liquidity {
                                            ctx: &mut TxContext): Coin<X> {
         let paid_value = coin::value(&paid_in);
         coin::put(&mut pool.coin_y, paid_in);
-        assert!(paid_value < balance::value(&mut pool.coin_x), ErrNotEnoughXInPool);
+        assert!(paid_value < balance::value(&pool.coin_x), ErrNotEnoughXInPool);
         coin::take(&mut pool.coin_x, paid_value, ctx)
     }
 

@@ -28,7 +28,7 @@ module smartunity::flag {
         table::add(&mut flag.coin, id, get_name<Coin>());
     }
 
-    public(friend) fun exists_coin<Coin>(flag: &mut Flag, id: ID): bool {
+    public(friend) fun exists_coin(flag: &Flag, id: ID): bool {
         table::contains(&flag.coin, id)
     }
 

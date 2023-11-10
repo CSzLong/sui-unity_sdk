@@ -2,6 +2,8 @@
 
 [move]
 version = 0
+manifest_digest = "0A1F1912F7CA367062AC215C45B76F51A05516BC3003571E02B7F23E39132CB9"
+deps_digest = "F8BBB0CCB2491CA29A3DF03D6F92277A4F3574266507ACD77214D37ECA3F3082"
 
 dependencies = [
   { name = "Sui" },
@@ -9,11 +11,11 @@ dependencies = [
 
 [[move.package]]
 name = "MoveStdlib"
-source = { local = "../../../sui/crates/sui-framework/packages/move-stdlib" }
+source = { local = "../../../../sui/crates/sui-framework/packages/move-stdlib" }
 
 [[move.package]]
 name = "Sui"
-source = { local = "../../../sui/crates/sui-framework/packages/sui-framework" }
+source = { local = "../../../../sui/crates/sui-framework/packages/sui-framework" }
 
 dependencies = [
   { name = "MoveStdlib" },
